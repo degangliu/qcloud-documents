@@ -1,3 +1,45 @@
+### Version 10.0 @ 2022.05.17
+
+**功能优化:** 
+
+- 全平台：优化主播进退房通知回调（[onRemoteUserEnterRoom](https://liteav.sdk.qcloud.com/doc/api/zh-cn/group__TRTCCloudDelegate__ios.html#a390831928a4d2a7977c4c1572da8be58) / [onRemoteUserLeaveRoom](https://liteav.sdk.qcloud.com/doc/api/zh-cn/group__TRTCCloudDelegate__ios.html#afa7d16e1e4c66d938fc2bc69f3e34c28)）的速度。
+- Windows：优化屏幕分享的性能，在未设置过滤窗口时，性能提升一倍。
+
+**缺陷修复:** 
+
+- iOS&Mac：修复开始播放 BGM 时，偶现的 [onComplete](https://liteav.sdk.qcloud.com/doc/api/zh-cn/group__TXAudioEffectManager__ios.html#a08ab9a6d9100f133420e44ae5eb99ee6) 回调错误的问题。
+- Android：修复一例网络模块导致的崩溃问题。
+- 全平台：修复 SEI 发送异常的问题。
+
+
+### Version 9.9 @ 2022.05.06
+
+**功能优化:** 
+- Windows：优化视频链路，降低性能开销。
+- Windows：优化 Systemloopback 采集前处理，保留双声道的效果。
+- Mac：优化采集音量过大时导致的爆音问题，提升音质体验。
+- Mac：提升屏幕分享（辅路）的画质。
+- Android：优化采集延迟，提升耳返体验。
+
+**缺陷修复:** 
+- Android：修复房间号不支持21亿以上号段的问题。
+
+
+### Version 9.8 @ 2022.04.21
+
+**新特性：**
+- Windows：新增“重金属”、“萝莉音”等音效接口，详见 `ITXAudioEffectManager.setVoiceChangerType`。
+- Windows：支持本地画面被暂停期间设置替代的图片进行推流，即垫片推流。
+
+**功能优化:** 
+
+全平台：优化视频场景下的性能。
+
+**缺陷修复:** 
+- Mac：修复录制系统声卡音频时，驱动安装失败的问题。
+- 全平台：修复本地屏幕分享（辅路）时自定义渲染失效的问题。
+
+
 ### Version 9.7 @ 2022.04.06
 
 **功能优化：** 

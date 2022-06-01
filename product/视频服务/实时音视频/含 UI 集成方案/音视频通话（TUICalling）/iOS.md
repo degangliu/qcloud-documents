@@ -1,6 +1,6 @@
 ## 组件介绍
 
-TUICalling 是一个开源的音视频 UI 组件，通过在项目中集成 TUICalling 组件，您只需要编写几行代码就可以为您的 App 添加“一对一音视频通话”，“多人音视频通话”等场景，并且支持离线唤起能力。TUICalling 同时支持 Android、Web、小程序、Flutter、UniApp 等平台，基本功能如下图所示：
+TUICalling 是一个开源的音视频 UI 组件，通过在项目中集成 TUICalling 组件，您只需要编写几行代码就可以为您的 App 添加“一对一音视频通话”场景，并且支持离线唤起能力。TUICalling 同时支持 Android、Web、小程序、Flutter、UniApp 等平台，基本功能如下图所示：
 
 <table class="tablestyle">
 <tbody><tr>
@@ -39,7 +39,7 @@ pod 'TUICalling', :path => "TUICalling/TUICalling.podspec", :subspecs => ["TRTC"
 
 ### 步骤三：创建并初始化组件
 
-<dx-tabs>
+<dx-codeblock>
 :::  Objective-C
 ```
 // 1.组件登录
@@ -68,7 +68,7 @@ TUILogin.login("您的UserID", userSig: "您的UserSig") {
 TUICalling.shareInstance()
 ```
 :::
-</dx-tabs>
+</dx-codeblock>
 
 **参数说明**：
 - **SDKAppID**：**TRTC 应用ID**，如果您未开通腾讯云 TRTC 服务，可进入 [腾讯云实时音视频控制台](https://console.cloud.tencent.com/trtc/app)，创建一个新的 TRTC 应用后，单击**应用信息**，SDKAppID 信息如下图所示：
@@ -78,8 +78,7 @@ TUICalling.shareInstance()
 - **UserSig**：根据 SDKAppId、UserID，SecretKey 等信息计算得到的安全保护签名，您可以单击 [这里](https://console.cloud.tencent.com/trtc/usersigtool) 直接在线生成一个调试的 UserSig，也可以参照我们的 [TUICalling示例工程](https://github.com/tencentyun/TUICalling/blob/main/iOS/Example/Debug/GenerateTestUserSig.swift#L39) 自行计算，更多信息见 [如何计算及使用 UserSig](https://cloud.tencent.com/document/product/647/17275)。
 
 ### 步骤四：实现音视频通话
-
-- 实现1对1视频通话 [TUICalling#call](https://cloud.tencent.com/document/product/647/47748#call)
+实现1对1视频通话 [TUICalling#call](https://cloud.tencent.com/document/product/647/47748#call)：
 <dx-codeblock>
 :::  Objective-C Objectivec
 // 发起1对1视频通话，假设userId为：1111
@@ -90,17 +89,7 @@ TUICalling.shareInstance()
 TUICalling.shareInstance().call(userIDs: ["1111"], type: .video)
 :::
 </dx-codeblock>
-- 实现多人视频通话 [TUICalling#call](https://cloud.tencent.com/document/product/647/47748#call)
-<dx-codeblock>
-:::  Objective-C Objectivec
-// 发起多人视频通话，假设userId分别为：1111、2222、3333；
-[[TUICalling shareInstance] call:@[@"1111", @"2222", @"3333"] type:TUICallingTypeVideo];
-:::
-::: Swift Swift
-// 发起多人视频通话，假设userId分别为：1111、2222、3333；
-TUICalling.shareInstance().call(userIDs: ["1111", "2222", "3333"], type: .video)
-:::
-</dx-codeblock>
+
 
 >? 当接收方完成步骤三后，即登录成功后，再收到通话请求后，TUICalling组件会自动启动相应的接听界面。
 

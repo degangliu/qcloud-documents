@@ -6,6 +6,7 @@
 </dx-alert>
 
 
+## 2022年
 <table>
 <thead>
 <tr>
@@ -14,6 +15,17 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<ul class="params">
+<li>更新 rdma 驱动至5.4-3.1.0.0LTS</li>
+<li>升级内核至5.4.119-19.0009.3</li>
+<li>更新用户态软件</li>
+<li>升级博通网卡驱动至1.10.2-218.1.182.18</li>
+</ul>
+</td>
+<td>2022-05-12</td>
+</tr>
 <tr>
 <td>
 <ul class="params">
@@ -41,6 +53,20 @@
 </td>
 <td>2022-01-11</td>
 </tr>
+</tbody>
+</table>
+
+
+
+## 2021年
+<table>
+<thead>
+<tr>
+<th style="width:60%"><strong>更新特性</strong></th>
+<th><strong>更新日期</strong></th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>
 <ul class="params">
